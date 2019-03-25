@@ -16,6 +16,7 @@ public class DBController extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        //테이블 생성
         /* 이름은 KEYWORD이고, 자동으로 값이 증가하는 _id 정수형 기본키 컬럼과 word 문자열 컬럼*/
         db.execSQL("CREATE TABLE KEYWORD (_id INTEGER PRIMARY KEY AUTOINCREMENT, word TEXT, favorite INTEGER DEFAULT 0);");
         db.execSQL("CREATE TABLE MEMO (_id INTEGER PRIMARY KEY, memo TEXT);");
